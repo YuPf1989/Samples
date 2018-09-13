@@ -14,4 +14,11 @@
         android:text="retrofit_download"
         />
 
+    <ProgressBar
+        android:id="@+id/pb"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        />
+
 </LinearLayout>

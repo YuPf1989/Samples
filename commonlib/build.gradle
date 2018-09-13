@@ -33,13 +33,16 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
     // 权限申请
-    implementation 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.4@aar'
+    api 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.4@aar'
 
-    implementation "io.reactivex.rxjava2:rxjava:2.2.2"
+    api "io.reactivex.rxjava2:rxjava:2.2.2"
 
     // retrofit2
-    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    api 'com.squareup.retrofit2:retrofit:2.4.0'
+    api 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
+    // rxandroid
+    api 'io.reactivex.rxjava2:rxandroid:2.0.2'
 
     // 日志拦截器
-    implementation 'com.squareup.okhttp3:logging-interceptor:3.10.0'
+    api 'com.squareup.okhttp3:logging-interceptor:3.10.0'
 }

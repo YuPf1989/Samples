@@ -7,6 +7,7 @@ import java.util.concurrent.TimeUnit;
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
+import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 
 /**
  * Author:rain
@@ -21,7 +22,7 @@ public class RetrofitHelper {
     private static RetrofitHelper retrofitHelper;
 
     // 调用接口中的网络请求方法的对象
-    private final Retrofit retrofit;
+    public final Retrofit retrofit;
 
     public static RetrofitHelper getInstance() {
         if (retrofitHelper == null) {
@@ -33,6 +34,7 @@ public class RetrofitHelper {
     private RetrofitHelper() {
         retrofit = new Retrofit.Builder()
                 .baseUrl(Constant.BASE_URL)
+                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .client(getOkHttpClient())
                 .build();
     }
