@@ -24,7 +24,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.btn_zbar).setOnClickListener(this);
         findViewById(R.id.btn_zxing).setOnClickListener(this);
         checkPermissions();
-
     }
 
     private void checkPermissions() {
