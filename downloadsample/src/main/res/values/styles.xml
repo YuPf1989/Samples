@@ -8,4 +8,46 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="bran_online_supervise_dialog" parent="@android:style/Theme.Dialog">
+        <!-- 背景透明 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!--透明度40%-->
+        <item name="android:backgroundDimAmount">0.4</item>
+        <!-- 浮于Activity之上 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- Dialog以外的区域模糊效果 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowNoTitle">false</item>
+        <!-- 半透明 -->
+        <!--<item name="android:windowIsTranslucent">true</item>-->
+        <!-- Dialog进入及退出动画 -->
+        <item name="android:windowAnimationStyle">@style/bran_online_supervise_animation</item>
+    </style>
+    <!-- Dialog从底部进出动画 -->
+    <style name="bran_online_supervise_animation" parent="@android:style/Animation.Dialog">
+        <item name="android:windowEnterAnimation">@anim/dialog_enter_anim</item>
+        <item name="android:windowExitAnimation">@anim/dialog_exit_anim</item>
+    </style>
+
+    <style name="UpdateAppNumberProgressBar_Red">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+
+        <item name="progress_max">100</item>
+        <item name="progress_current">0</item>
+
+        <item name="progress_unreached_color">#CCCCCC</item>
+        <item name="progress_reached_color">#e94339</item>
+
+        <item name="progress_text_size">12sp</item>
+        <item name="progress_text_color">#e94339</item>
+
+        <item name="progress_reached_bar_height">4dp</item>
+        <item name="progress_unreached_bar_height">3dp</item>
+    </style>
+
 </resources>

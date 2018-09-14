@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:text="1. 优化\n2. 性能 " />
+
+
+    <com.rain.downloadsample.ui.NumberProgressBar
+        android:id="@+id/pb2"
+        style="@style/UpdateAppNumberProgressBar_Red"
+        android:layout_margin="12dp"
+        android:visibility="gone" />
+
+</LinearLayout>
