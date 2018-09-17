@@ -34,8 +34,8 @@ public class TestActivity2 extends AppCompatActivity implements View.OnClickList
 //                if (isFinishing()) {
 //                    timer.cancel();
 //                }
-//                Log.e(TAG, "run: "+ i[0]++);
-                System.out.println("run: "+ i[0]++);
+//                System.out.println("run: "+ i[0]++);
+                System.out.println("run: ");
             }
         },0,2000);
     }
