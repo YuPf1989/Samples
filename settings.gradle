@@ -1,1 +1,1 @@
-include ':app', ':qrcodesample', ':downloadsample', ':commonlib'
+include ':app', ':qrcodesample', ':downloadsample', ':commonlib', ':justtestsample'
