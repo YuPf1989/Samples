@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
+import com.rain.justtestsample.about_thread.TestActivity2;
+import com.rain.justtestsample.android_tint.AndroidTintActivity;
 import com.rain.justtestsample.handler_oom.HandlerOOMActivity;
 
 /**
@@ -19,10 +21,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.e(TAG, "onCreate: ");
         setContentView(R.layout.activity_main);
 
         findViewById(R.id.btn_q1).setOnClickListener(this);
         findViewById(R.id.btn_q2).setOnClickListener(this);
+        findViewById(R.id.btn_q3).setOnClickListener(this);
 
     }
 
@@ -36,22 +40,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_q2:
                 startActivity(new Intent(this,HandlerOOMActivity.class));
                 break;
+
+            case R.id.btn_q3:
+                startActivity(new Intent(this,AndroidTintActivity.class));
+                break;
         }
     }
 
-    private static Handler handler = new Handler() {
-        @Override
-        public void handleMessage(Message msg) {
-            super.handleMessage(msg);
-
-        }
-    };
 
 
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        handler.removeCallbacksAndMessages(null);
     }
 }

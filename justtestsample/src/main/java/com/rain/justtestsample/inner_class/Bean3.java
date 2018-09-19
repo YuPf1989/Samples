@@ -1,4 +1,4 @@
-package com.rain.justtestsample;
+package com.rain.justtestsample.inner_class;
 
 /**
  * Author:rain

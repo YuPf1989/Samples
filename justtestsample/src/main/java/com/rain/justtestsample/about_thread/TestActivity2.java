@@ -1,10 +1,12 @@
-package com.rain.justtestsample;
+package com.rain.justtestsample.about_thread;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+
+import com.rain.justtestsample.R;
 
 import java.util.Timer;
 import java.util.TimerTask;

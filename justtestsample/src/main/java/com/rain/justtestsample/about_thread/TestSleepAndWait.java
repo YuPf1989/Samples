@@ -1,4 +1,4 @@
-package com.rain.justtestsample;
+package com.rain.justtestsample.about_thread;
 
 /**
  * Author:rain
@@ -84,6 +84,4 @@ public class TestSleepAndWait {
             }
         }
     }
-
-
 }
