@@ -13,6 +13,7 @@
             <option value="$PROJECT_DIR$/downloadsample" />
             <option value="$PROJECT_DIR$/justtestsample" />
             <option value="$PROJECT_DIR$/qrcodesample" />
+            <option value="$PROJECT_DIR$/rxjava2demo" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
