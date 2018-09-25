@@ -45,4 +45,12 @@ dependencies {
 
     // 日志拦截器
     api 'com.squareup.okhttp3:logging-interceptor:3.10.0'
+
+    // gson解析器
+    api 'com.squareup.retrofit2:converter-gson:2.4.0'
+
+    // rxcache
+    api "com.github.VictorAlbertos.RxCache:runtime:1.8.3-2.x"
+    // To use Gson
+    api 'com.github.VictorAlbertos.Jolyglot:gson:0.0.4'
 }

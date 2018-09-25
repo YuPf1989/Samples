@@ -1,6 +1,7 @@
 package com.rain.commonlib.net;
 
 import com.rain.commonlib.base.Constant;
+import com.rain.commonlib.net.MyGsonConverter.MyGsonConverterFactory;
 
 import java.util.concurrent.TimeUnit;
 
@@ -35,6 +36,7 @@ public class RetrofitHelper {
         retrofit = new Retrofit.Builder()
                 .baseUrl(Constant.BASE_URL)
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+                .addConverterFactory(MyGsonConverterFactory.create())
                 .client(getOkHttpClient())
                 .build();
     }
