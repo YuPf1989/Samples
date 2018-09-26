@@ -1,12 +1,20 @@
 package com.rain.commonlib.net;
 
+import android.app.Application;
+
+import com.rain.commonlib.base.BaseApplication;
 import com.rain.commonlib.base.Constant;
 import com.rain.commonlib.net.MyGsonConverter.MyGsonConverterFactory;
 
+import java.io.File;
 import java.util.concurrent.TimeUnit;
 
+import okhttp3.Cache;
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
+import ren.yale.android.retrofitcachelibrx2.RetrofitCache;
+import ren.yale.android.retrofitcachelibrx2.intercept.CacheForceInterceptorNoNet;
+import ren.yale.android.retrofitcachelibrx2.intercept.CacheInterceptorOnNet;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 
@@ -21,12 +29,14 @@ public class RetrofitHelper {
     public static final int DEFAULT_TIMEOUT = 5;
 
     private static RetrofitHelper retrofitHelper;
+    private static Application mContext;
 
     // 调用接口中的网络请求方法的对象
     public final Retrofit retrofit;
 
     public static RetrofitHelper getInstance() {
         if (retrofitHelper == null) {
+            mContext = BaseApplication.getInstance();
             retrofitHelper = new RetrofitHelper();
         }
         return retrofitHelper;
@@ -39,12 +49,21 @@ public class RetrofitHelper {
                 .addConverterFactory(MyGsonConverterFactory.create())
                 .client(getOkHttpClient())
                 .build();
+
+        RetrofitCache.getInstance().addRetrofit(retrofit);
     }
 
     private OkHttpClient getOkHttpClient() {
         OkHttpClient.Builder builder = new OkHttpClient.Builder();
+        // 200M
+        int cacheSize = 200 * 1024 * 1024;
+        File httpcacheFile = new File(mContext.getCacheDir(), "httpcache");
+        Cache cache = new Cache(httpcacheFile, cacheSize);
         builder
+                .cache(cache)
                 .addInterceptor(new HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY))
+                .addInterceptor(new CacheForceInterceptorNoNet())
+                .addNetworkInterceptor(new CacheInterceptorOnNet())
                 .connectTimeout(DEFAULT_TIMEOUT, TimeUnit.SECONDS)
                 .readTimeout(DEFAULT_TIMEOUT, TimeUnit.SECONDS)
                 .writeTimeout(DEFAULT_TIMEOUT, TimeUnit.SECONDS);

@@ -24,6 +24,7 @@ public class RxDemoActivity extends AppCompatActivity implements View.OnClickLis
 
         setContentView(R.layout.activity_rxdemo);
         findViewById(R.id.btn_rxcache).setOnClickListener(this);
+        findViewById(R.id.btn_retrofit_cache).setOnClickListener(this);
         tvContent = findViewById(R.id.tv_content);
 
     }
@@ -34,6 +35,12 @@ public class RxDemoActivity extends AppCompatActivity implements View.OnClickLis
             case R.id.btn_rxcache:
                 startActivity(new Intent(this, RxCacheActivity.class));
                 break;
+
+            case R.id.btn_retrofit_cache:
+                startActivity(new Intent(this, RetrofitCacheActivity.class));
+                break;
         }
     }
+
+
 }

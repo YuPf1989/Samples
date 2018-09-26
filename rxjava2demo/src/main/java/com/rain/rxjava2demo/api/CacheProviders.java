@@ -45,14 +45,12 @@ import io.rx_cache2.Reply;
  * 注解 @EncryptKey & @Encrypt
  * ..@EncryptKey作用域为接口，指明加密的key ，@Encrypt作用域为方法，指定哪些方法加密
  */
-@EncryptKey("123")
 public interface CacheProviders {
     //    Observable<NewsListBean> getWikiList();
     @LifeCache(duration = 2, timeUnit = TimeUnit.MINUTES)
     Observable<Reply<NewsListBean>> getNewsList(Observable<NewsListBean> obs);
 
     @Expirable(false)
-    @Encrypt
     @LifeCache(duration = 2, timeUnit = TimeUnit.MINUTES)
     Observable<Reply<NewsListBean>> getNewsList2(Observable<NewsListBean> obs, DynamicKey page, EvictDynamicKey evictDynamicKey);
 }

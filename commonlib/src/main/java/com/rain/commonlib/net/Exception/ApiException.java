@@ -7,7 +7,6 @@ package com.rain.commonlib.net.Exception;
 public class ApiException extends RuntimeException {
     private int errorCode;
 
-
     public ApiException(int code, String msg) {
         super(msg);
         this.errorCode = code;

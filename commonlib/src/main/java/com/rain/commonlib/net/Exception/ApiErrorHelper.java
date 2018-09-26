@@ -1,6 +1,7 @@
 package com.rain.commonlib.net.Exception;
 
 import android.content.Context;
+import android.util.Log;
 import android.widget.Toast;
 
 import org.json.JSONException;
@@ -20,6 +21,8 @@ public class ApiErrorHelper {
 
 
     public static void handleCommonError(Context context, Throwable e) {
+
+        Log.e(TAG, "handleCommonError: e"+e.toString());
 
         if (e instanceof ConnectException) {    // 网络连接错误
             Toast.makeText(context, "网络连接异常！", Toast.LENGTH_SHORT).show();

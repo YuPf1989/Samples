@@ -22,6 +22,7 @@
         <activity android:name=".ui.RxOperatorActivity" />
         <activity android:name=".ui.RxDemoActivity" />
         <activity android:name=".ui.RxCacheActivity" />
+        <activity android:name=".ui.RetrofitCacheActivity" />
     </application>
 
 </manifest>
