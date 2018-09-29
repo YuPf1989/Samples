@@ -24,4 +24,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="android Tint着色"/>
+
+    <Button
+        android:id="@+id/btn_q4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ConstraintLayout布局使用"/>
 </LinearLayout>

@@ -1,5 +1,6 @@
 package com.rain.rxjava2demo.api;
 
+import com.rain.rxjava2demo.bean.BaseBean;
 import com.rain.rxjava2demo.bean.NewsListBean;
 
 import java.util.concurrent.TimeUnit;
@@ -27,4 +28,10 @@ public interface RetrofitService {
     @GET("http://47.93.136.56:7011/appInterface/patient/getWikiList.html")
     Observable<NewsListBean> getWikiList2();
 
+    @Cache(time = 2,timeUnit = TimeUnit.MINUTES,forceCacheNoNet = true)
+    @GET(" http://www.kuaidi100.com/query?type=shentong&postid=123465")
+    Observable<BaseBean> test3();
+
+    @GET(" http://www.kuaidi100.com/query?type=shentong&postid=123465")
+    Observable<BaseBean> test2();
 }

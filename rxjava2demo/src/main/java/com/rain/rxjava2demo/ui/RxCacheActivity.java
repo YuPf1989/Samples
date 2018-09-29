@@ -61,7 +61,8 @@ public class RxCacheActivity extends AppCompatActivity implements View.OnClickLi
         Observable<NewsListBean> wikiList = RetrofitHelper.getInstance().retrofit.create(RetrofitService.class).getWikiList();
         CacheProviders using = new RxCache.Builder()
                 // 在请求出错的情况下，忽视缓存过期的情况，依旧使用缓存，前提是缓存存在
-                .useExpiredDataIfLoaderNotAvailable(true)
+                // 实际情况是如果没有网络，并且缓存过期，是不会加载缓存的，所以下面这行代码失去了意义
+                .useExpiredDataIfLoaderNotAvailable(false)
                 .persistence(getCacheDir(), new GsonSpeaker())
                 .using(CacheProviders.class);
 

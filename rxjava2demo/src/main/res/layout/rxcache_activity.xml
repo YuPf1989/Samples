@@ -9,13 +9,19 @@
         android:id="@+id/btn_cache_request"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="带缓存请求" />
+        android:text="rxcache" />
 
     <Button
         android:id="@+id/btn_cache_request2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="带参数的缓存请求" />
+        android:text="retrofitcache" />
+
+    <Button
+        android:id="@+id/btn_cache_request3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="okhttpcache" />
 
     <ScrollView
         android:layout_width="match_parent"

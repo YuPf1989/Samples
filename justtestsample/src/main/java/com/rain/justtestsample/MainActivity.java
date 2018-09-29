@@ -10,6 +10,7 @@ import android.view.View;
 
 import com.rain.justtestsample.about_thread.TestActivity2;
 import com.rain.justtestsample.android_tint.AndroidTintActivity;
+import com.rain.justtestsample.constraintlayout.ConstraintLayoutActivity;
 import com.rain.justtestsample.handler_oom.HandlerOOMActivity;
 
 /**
@@ -27,6 +28,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.btn_q1).setOnClickListener(this);
         findViewById(R.id.btn_q2).setOnClickListener(this);
         findViewById(R.id.btn_q3).setOnClickListener(this);
+        findViewById(R.id.btn_q4).setOnClickListener(this);
 
     }
 
@@ -43,6 +45,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.btn_q3:
                 startActivity(new Intent(this,AndroidTintActivity.class));
+                break;
+
+            case R.id.btn_q4:
+                startActivity(new Intent(this,ConstraintLayoutActivity.class));
                 break;
         }
     }

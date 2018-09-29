@@ -20,6 +20,7 @@
         <activity android:name=".about_thread.TestActivity2" />
         <activity android:name=".handler_oom.HandlerOOMActivity" />
         <activity android:name=".android_tint.AndroidTintActivity" />
+        <activity android:name=".constraintlayout.ConstraintLayoutActivity" />
     </application>
 
 </manifest>

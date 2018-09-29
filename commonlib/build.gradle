@@ -55,5 +55,5 @@ dependencies {
     api 'com.github.VictorAlbertos.Jolyglot:gson:0.0.4'
 
     // retrofitcache
-    api 'ren.yale.android:retrofitcachelibrx2:1.0.8'
+    api 'ren.yale.android:retrofitcachelibrx2:1.0.9'
 }

@@ -23,6 +23,7 @@
         <activity android:name=".ui.RxDemoActivity" />
         <activity android:name=".ui.RxCacheActivity" />
         <activity android:name=".ui.RetrofitCacheActivity" />
+        <activity android:name=".ui.OkhttpCacheActivity" />
     </application>
 
 </manifest>
